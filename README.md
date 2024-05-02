@@ -17,7 +17,11 @@ Odoo modules dedicated for the bike industry
 
 [//]: # (addons)
 
-This part will be replaced when running the oca-gen-addons-table script from OCA/maintainer-tools.
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[bicycode](bicycode/) | 14.0.2.0.0 | [![hparfr](https://github.com/hparfr.png?size=30px)](https://github.com/hparfr) | Bicycode management
 
 [//]: # (end addons)
 
