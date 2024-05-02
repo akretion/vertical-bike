@@ -1,0 +1,165 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* bicycode
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-21 09:35+0000\n"
+"PO-Revision-Date: 2023-09-21 09:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: bicycode
+#: model_terms:ir.ui.view,arch_db:bicycode.report_delivery_document
+msgid "<strong>Bicycode</strong>"
+msgstr ""
+
+#. module: bicycode
+#: model:ir.model.fields,field_description:bicycode.field_stock_bicycode__name
+#: model_terms:ir.ui.view,arch_db:bicycode.report_delivery_document
+#: model_terms:ir.ui.view,arch_db:bicycode.view_bicycode_form
+msgid "Bicycode"
+msgstr ""
+
+#. module: bicycode
+#: model:ir.model.fields,field_description:bicycode.field_stock_picking__bicycode_required
+#: model:ir.model.fields,field_description:bicycode.field_stock_picking_type__bicycode_required
+msgid "Bicycode required"
+msgstr "Bicycode requis"
+
+#. module: bicycode
+#: model:ir.actions.act_window,name:bicycode.stock_bicycode_action
+#: model:ir.model.fields,field_description:bicycode.field_stock_move_line__bicycode_ids
+#: model:ir.ui.menu,name:bicycode.stock_bicycode_menu
+#: model_terms:ir.ui.view,arch_db:bicycode.view_bicycode_tree
+#: model_terms:ir.ui.view,arch_db:bicycode.view_picking_type_form
+msgid "Bicycodes"
+msgstr ""
+
+#. module: bicycode
+#: model:ir.model.fields,field_description:bicycode.field_stock_bicycode__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: bicycode
+#: model:ir.model.fields,field_description:bicycode.field_stock_bicycode__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: bicycode
+#: model:ir.model.fields,field_description:bicycode.field_product_template__display_name
+#: model:ir.model.fields,field_description:bicycode.field_stock_bicycode__display_name
+#: model:ir.model.fields,field_description:bicycode.field_stock_move_line__display_name
+#: model:ir.model.fields,field_description:bicycode.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:bicycode.field_stock_picking_type__display_name
+msgid "Display Name"
+msgstr "Nom à afficher"
+
+#. module: bicycode
+#: model:ir.model.fields,field_description:bicycode.field_product_product__has_bicycode
+#: model:ir.model.fields,field_description:bicycode.field_product_template__has_bicycode
+#: model:ir.model.fields,field_description:bicycode.field_shopinvader_product__has_bicycode
+#: model:ir.model.fields,field_description:bicycode.field_shopinvader_variant__has_bicycode
+msgid "Has Bicycode"
+msgstr "Possède un bicycode"
+
+#. module: bicycode
+#: model:ir.model.fields,field_description:bicycode.field_product_template__id
+#: model:ir.model.fields,field_description:bicycode.field_stock_bicycode__id
+#: model:ir.model.fields,field_description:bicycode.field_stock_move_line__id
+#: model:ir.model.fields,field_description:bicycode.field_stock_picking__id
+#: model:ir.model.fields,field_description:bicycode.field_stock_picking_type__id
+msgid "ID"
+msgstr ""
+
+#. module: bicycode
+#: model:ir.model.fields,help:bicycode.field_stock_picking__bicycode_required
+#: model:ir.model.fields,help:bicycode.field_stock_picking_type__bicycode_required
+msgid ""
+"If checked, the user will have to input the bicycode of the products that "
+"have one to validate the picking."
+msgstr ""
+"Si coché, l'utilisateur devra saisir le bicycode des articles qui en "
+"possèdent un pour valider le transfert."
+
+#. module: bicycode
+#: model:ir.model.fields,field_description:bicycode.field_product_template____last_update
+#: model:ir.model.fields,field_description:bicycode.field_stock_bicycode____last_update
+#: model:ir.model.fields,field_description:bicycode.field_stock_move_line____last_update
+#: model:ir.model.fields,field_description:bicycode.field_stock_picking____last_update
+#: model:ir.model.fields,field_description:bicycode.field_stock_picking_type____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: bicycode
+#: model:ir.model.fields,field_description:bicycode.field_stock_bicycode__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: bicycode
+#: model:ir.model.fields,field_description:bicycode.field_stock_bicycode__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: bicycode
+#: model:ir.model.fields,field_description:bicycode.field_stock_bicycode__move_line_ids
+msgid "Move lines"
+msgstr ""
+
+#. module: bicycode
+#: model:ir.model.fields,field_description:bicycode.field_stock_bicycode__partner_ids
+msgid "Partners"
+msgstr "Partenaires"
+
+#. module: bicycode
+#: model:ir.model,name:bicycode.model_stock_picking_type
+msgid "Picking Type"
+msgstr "Type de transfert"
+
+#. module: bicycode
+#: model:ir.model.fields,field_description:bicycode.field_stock_bicycode__picking_ids
+msgid "Pickings"
+msgstr "Transferts"
+
+#. module: bicycode
+#: model:ir.model,name:bicycode.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Mouvements d'article (Ligne de mouvement de stock)"
+
+#. module: bicycode
+#: model:ir.model,name:bicycode.model_product_template
+msgid "Product Template"
+msgstr "Modèle d'article"
+
+#. module: bicycode
+#: model:ir.model.fields,field_description:bicycode.field_stock_bicycode__sale_order_ids
+msgid "Sale orders"
+msgstr "Ventes"
+
+#. module: bicycode
+#: model:ir.model,name:bicycode.model_stock_picking
+msgid "Transfer"
+msgstr "Transfert"
+
+#. module: bicycode
+#: code:addons/bicycode/models/stock_picking.py:0
+#, python-format
+msgid "You have set too many bicycodes for product %s"
+msgstr "Vous avez saisi trop de bicycodes pour l'article %s"
+
+#. module: bicycode
+#: code:addons/bicycode/models/stock_picking.py:0
+#, python-format
+msgid "You must input %d bicycode(s) for product %s"
+msgstr "Vous devez saisir %d bicycode(s) pour l'article %s"
+
+#. module: bicycode
+#: model:ir.model,name:bicycode.model_stock_bicycode
+msgid "stock.bicycode"
+msgstr ""

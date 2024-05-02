@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2023 Akretion
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl-3.0) -->
+<odoo>
+    <record id="view_bicycode_tree" model="ir.ui.view">
+        <field name="name">stock.bicycode.tree</field>
+        <field name="model">stock.bicycode</field>
+        <field name="arch" type="xml">
+            <tree string="Bicycodes">
+                <field name="name" />
+                <field name="sale_order_ids" widget="many2many_tags" />
+                <field name="partner_ids" widget="many2many_tags" />
+                <field name="picking_ids" widget="many2many_tags" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_bicycode_form" model="ir.ui.view">
+        <field name="name">stock.bicycode.form</field>
+        <field name="model">stock.bicycode</field>
+        <field name="arch" type="xml">
+            <form string="Bicycode">
+                <sheet>
+                    <div class="oe_title mb-5">
+                        <h1>
+                            <field name="name" placeholder="Bicycode" />
+                        </h1>
+                      </div>
+                    <label for="partner_ids" />
+                    <field name="partner_ids" />
+                    <label for="sale_order_ids" />
+                    <field name="sale_order_ids" />
+                    <label for="picking_ids" />
+                    <field name="picking_ids" />
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="stock_bicycode_view_search" model="ir.ui.view">
+        <field name="name">stock.bicycode.search</field>
+        <field name="model">stock.bicycode</field>
+        <field name="arch" type="xml">
+            <search string="Stock Bicycodes">
+                <field name="name" />
+                <field name="sale_order_ids" />
+                <field name="partner_ids" />
+                <field name="picking_ids" />
+            </search>
+        </field>
+    </record>
+
+    <record id="stock_bicycode_action" model="ir.actions.act_window">
+        <field name="name">Bicycodes</field>
+        <field name="res_model">stock.bicycode</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_bicycode_tree" />
+    </record>
+
+    <menuitem
+        action="stock_bicycode_action"
+        id="stock_bicycode_menu"
+        parent="stock.menu_stock_inventory_control"
+        sequence="10"
+    />
+
+    <menuitem
+        action="stock_bicycode_action"
+        id="sale_product_bicycode_menu"
+        parent="sale.product_menu_catalog"
+        sequence="10"
+    />
+
+</odoo>
