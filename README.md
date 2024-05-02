@@ -22,6 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [bicycode](bicycode/) | 14.0.2.0.0 | [![hparfr](https://github.com/hparfr.png?size=30px)](https://github.com/hparfr) | Bicycode management
+[shopinvader_bicycode](shopinvader_bicycode/) | 14.0.2.0.0 | [![hparfr](https://github.com/hparfr.png?size=30px)](https://github.com/hparfr) | Publish bicycode in API
 [shopinvader_delivery_detail](shopinvader_delivery_detail/) | 14.0.0.0.1 | [![hparfr](https://github.com/hparfr.png?size=30px)](https://github.com/hparfr) | Displays move lines in pickings
 
 [//]: # (end addons)
