@@ -38,6 +38,8 @@ jobs:
           - container: ghcr.io/oca/oca-ci/py3.6-ocb14.0:latest
             name: test with OCB
             makepot: "true"
+    env:
+      PIP_EXTRA_INDEX_URL: "https://wheelhouse.shopinvader.com/simple/"
     services:
       postgres:
         image: postgres:9.6
