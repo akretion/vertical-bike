@@ -21,9 +21,9 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[bicycode](bicycode/) | 14.0.2.0.0 | [![hparfr](https://github.com/hparfr.png?size=30px)](https://github.com/hparfr) | Bicycode management
-[shopinvader_bicycode](shopinvader_bicycode/) | 14.0.2.0.0 | [![hparfr](https://github.com/hparfr.png?size=30px)](https://github.com/hparfr) | Publish bicycode in API
-[shopinvader_delivery_detail](shopinvader_delivery_detail/) | 14.0.0.0.1 | [![hparfr](https://github.com/hparfr.png?size=30px)](https://github.com/hparfr) | Displays move lines in pickings
+[bicycode](bicycode/) | 14.0.2.0.0 | <a href='https://github.com/hparfr'><img src='https://github.com/hparfr.png' width='32' height='32' style='border-radius:50%;' alt='hparfr'/></a> | Bicycode management
+[shopinvader_bicycode](shopinvader_bicycode/) | 14.0.2.0.0 | <a href='https://github.com/hparfr'><img src='https://github.com/hparfr.png' width='32' height='32' style='border-radius:50%;' alt='hparfr'/></a> | Publish bicycode in API
+[shopinvader_delivery_detail](shopinvader_delivery_detail/) | 14.0.0.0.1 | <a href='https://github.com/hparfr'><img src='https://github.com/hparfr.png' width='32' height='32' style='border-radius:50%;' alt='hparfr'/></a> | Displays move lines in pickings
 
 [//]: # (end addons)
 
