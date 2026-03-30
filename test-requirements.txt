@@ -1,2 +1,0 @@
-odoo14-addon-shopinvader
-odoo14-addon-shopinvader-delivery-carrier
