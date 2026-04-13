@@ -43,7 +43,7 @@ class StockMoveLine(models.Model):
                 description = False
             return (
                 f'{product_id.id}_{name}{description or ""}'
-                f"uom {move_line.product_uom_id.id}"
+                f"__{move_line.product_uom_id.id}_"
             )
 
         for move_line in self:

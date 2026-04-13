@@ -35,16 +35,16 @@ class Picking(models.Model):
         for picking in self:
             if not picking.picking_type_id.bicycode_required:
                 continue
-            for move in picking.move_lines:
+            for move in picking.move_ids:
                 if not move.product_id.has_bicycode:
                     continue
                 for move_line in move.move_line_ids:
-                    if move_line.qty_done > len(move_line.bicycode_ids):
+                    if move_line.quantity > len(move_line.bicycode_ids):
                         raise UserError(
                             _("You must input %d bicycode(s) for product %s")
-                            % (move_line.qty_done, move_line.product_id.name)
+                            % (move_line.quantity, move_line.product_id.name)
                         )
-                    if move_line.qty_done < len(move_line.bicycode_ids):
+                    if move_line.quantity < len(move_line.bicycode_ids):
                         raise UserError(
                             _("You have set too many bicycodes for product %s")
                             % move_line.product_id.name

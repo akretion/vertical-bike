@@ -1,3 +1,4 @@
+from odoo import Command
 from odoo.exceptions import UserError
 from odoo.tests import Form, common, tagged
 
@@ -34,21 +35,16 @@ class TestBicycode(common.TransactionCase):
                 "partner_invoice_id": self.partner_a.id,
                 "partner_shipping_id": self.partner_a.id,
                 "order_line": [
-                    (
-                        0,
-                        0,
+                    Command.create(
                         {
                             "name": p.name,
                             "product_id": p.id,
                             "product_uom_qty": 4,
                             "product_uom": p.uom_id.id,
                             "price_unit": p.list_price,
-                        },
+                        }
                     )
-                    for p in (
-                        self.product_a,
-                        self.product_b,
-                    )
+                    for p in (self.product_a, self.product_b)
                 ],
                 "picking_policy": "direct",
             }
@@ -62,7 +58,7 @@ class TestBicycode(common.TransactionCase):
         pick = self.so.picking_ids
         self.assertEqual(pick.picking_type_id, self.picking_type)
 
-        pick.move_lines.write({"quantity_done": 3})
+        pick.move_ids.write({"quantity": 3})
         wiz_act = pick.button_validate()
         wiz = Form(
             self.env[wiz_act["res_model"]].with_context(wiz_act["context"])
@@ -76,7 +72,7 @@ class TestBicycode(common.TransactionCase):
         pick = self.so.picking_ids
         self.assertEqual(pick.picking_type_id, self.picking_type)
 
-        pick.move_lines.write({"quantity_done": 3})
+        pick.move_ids.write({"quantity": 3})
         wiz_act = pick.button_validate()
         wiz = Form(
             self.env[wiz_act["res_model"]].with_context(wiz_act["context"])
@@ -90,7 +86,7 @@ class TestBicycode(common.TransactionCase):
         pick = self.so.picking_ids
         self.assertEqual(pick.picking_type_id, self.picking_type)
 
-        pick.move_lines.write({"quantity_done": 3})
+        pick.move_ids.write({"quantity": 3})
         wiz_act = pick.button_validate()
         wiz = Form(
             self.env[wiz_act["res_model"]].with_context(wiz_act["context"])
@@ -104,7 +100,7 @@ class TestBicycode(common.TransactionCase):
 
         self.so.action_confirm()
         pick = self.so.picking_ids
-        pick.move_lines.write({"quantity_done": 3})
+        pick.move_ids.write({"quantity": 3})
         wiz_act = pick.button_validate()
         wiz = Form(
             self.env[wiz_act["res_model"]].with_context(wiz_act["context"])
@@ -120,9 +116,9 @@ class TestBicycode(common.TransactionCase):
 
         self.so.action_confirm()
         pick = self.so.picking_ids
-        pick.move_lines.write({"quantity_done": 3})
+        pick.move_ids.write({"quantity": 3})
         pick.move_line_ids[0].bicycode_ids = [
-            (0, 0, {"name": "bicycode_%d" % i}) for i in range(3)
+            Command.create({"name": "bicycode_%d" % i}) for i in range(3)
         ]
         wiz_act = pick.button_validate()
         wiz = Form(
@@ -137,9 +133,9 @@ class TestBicycode(common.TransactionCase):
 
         self.so.action_confirm()
         pick = self.so.picking_ids
-        pick.move_lines.write({"quantity_done": 3})
+        pick.move_ids.write({"quantity": 3})
         pick.move_line_ids[0].bicycode_ids = [
-            (0, 0, {"name": "bicycode_%d" % i}) for i in range(4)
+            Command.create({"name": "bicycode_%d" % i}) for i in range(4)
         ]
         wiz_act = pick.button_validate()
         wiz = Form(
@@ -156,9 +152,9 @@ class TestBicycode(common.TransactionCase):
 
         self.so.action_confirm()
         pick = self.so.picking_ids
-        pick.move_lines.write({"quantity_done": 3})
+        pick.move_ids.write({"quantity": 3})
         pick.move_line_ids[0].bicycode_ids = [
-            (0, 0, {"name": "bicycode_%d" % i}) for i in range(3)
+            Command.create({"name": "bicycode_%d" % i}) for i in range(3)
         ]
         wiz_act = pick.button_validate()
         wiz = Form(
@@ -168,8 +164,7 @@ class TestBicycode(common.TransactionCase):
         agg_lines = pick.move_line_ids._get_aggregated_product_quantities()
         self.assertEqual(len(agg_lines), 2)
         expected_line_product_keys = [
-            f"{p.id}_{p.name}uom {p.uom_id.id}"
-            for p in (self.product_a, self.product_b)
+            f"{p.id}_{p.name}__{p.uom_id.id}_" for p in (self.product_a, self.product_b)
         ]
         self.assertEqual(list(agg_lines.keys()), expected_line_product_keys)
         self.assertEqual(

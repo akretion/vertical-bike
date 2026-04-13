@@ -6,12 +6,12 @@
         <field name="name">stock.bicycode.tree</field>
         <field name="model">stock.bicycode</field>
         <field name="arch" type="xml">
-            <tree string="Bicycodes">
+            <list string="Bicycodes">
                 <field name="name" />
                 <field name="sale_order_ids" widget="many2many_tags" />
                 <field name="partner_ids" widget="many2many_tags" />
                 <field name="picking_ids" widget="many2many_tags" />
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -54,7 +54,7 @@
         <field name="name">Bicycodes</field>
         <field name="res_model">stock.bicycode</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
         <field name="view_id" ref="view_bicycode_tree" />
     </record>
 

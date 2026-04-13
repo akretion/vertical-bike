@@ -8,12 +8,12 @@
         <field name="inherit_id" ref="stock.view_template_property_form" />
         <field name="priority" eval="90" />
         <field name="arch" type="xml">
-            <field name="tracking" position="after">
+            <xpath expr="//div[field[@name='is_storable']]" position="after">
                 <field
                     name="has_bicycode"
-                    attrs="{'invisible': [('type', 'in', ['service', 'digital'])]}"
+                    invisible="type in ('service', 'digital')"
                 />
-            </field>
+            </xpath>
         </field>
     </record>
 

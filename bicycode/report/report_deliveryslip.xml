@@ -63,7 +63,7 @@
         id="stock_report_delivery_aggregated_move_lines"
         inherit_id="stock.stock_report_delivery_aggregated_move_lines"
     >
-        <xpath expr="//td[@name='move_line_aggregated_qty_done']" position="before">
+        <xpath expr="//td[@name='move_line_aggregated_quantity']" position="before">
             <td t-if="lines_with_done_bicycode">
                 <span
                     t-esc="'; '.join(aggregated_lines[line]['bicycode_done_values'])"
