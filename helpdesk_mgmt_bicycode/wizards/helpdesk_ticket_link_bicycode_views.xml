@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Akretion
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl-3.0) -->
+<odoo>
+    <record id="view_helpdesk_ticket_link_bicycode_wizard" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.link.bicycode.wizard.form</field>
+        <field name="model">helpdesk.ticket.link.bicycode.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Link Bicycodes">
+                <field name="bicycode_ids" />
+                <footer>
+                    <button
+                        name="action_confirm"
+                        type="object"
+                        string="Link Bicycodes"
+                        class="btn-primary"
+                    />
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record
+        id="action_helpdesk_ticket_link_bicycode_wizard"
+        model="ir.actions.act_window"
+    >
+        <field name="name">Link Bicycodes</field>
+        <field name="res_model">helpdesk.ticket.link.bicycode.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>
