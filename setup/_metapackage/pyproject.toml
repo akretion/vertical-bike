@@ -1,8 +1,9 @@
 [project]
 name = "odoo-addons-akretion-vertical-bike"
-version = "18.0.20260420.0"
+version = "18.0.20260831.0"
 dependencies = [
     "odoo-addon-bicycode==18.0.*",
+    "odoo-addon-helpdesk_mgmt_bicycode==18.0.*",
 ]
 classifiers=[
     "Programming Language :: Python",
