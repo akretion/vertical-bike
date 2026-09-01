@@ -34,7 +34,9 @@ class HelpdeskTicket(models.Model):
 
     def _bicycode_autobind(self):
         if self.customer_bicycode and not self.bicycode_ids:
-            candidates = self.bicycode_ids.search([["name", "=", self.customer_bicycode]])
+            candidates = self.bicycode_ids.search(
+                [["name", "=", self.customer_bicycode]]
+            )
             if candidates:
                 self.bicycode_ids = candidates
                 return True
